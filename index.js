@@ -1,6 +1,7 @@
 // Required node modules
 let express = require('express')
 let layouts = require('express-ejs-layouts')
+let db = require('./models')
 
 // Declare express app instance
 let app = express()
@@ -18,7 +19,8 @@ app.use(express.static('static'))
 app.use(express.urlencoded({ extended: false }))
 
 // Include all routes from routers/controllers
-// TODO!
+app.use('/players', require('./controllers/players'))
+app.use('/teams', require('./controllers/teams'))
 
 // Home route
 app.get('/', (req, res) => {
