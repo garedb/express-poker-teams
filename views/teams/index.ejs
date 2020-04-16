@@ -8,8 +8,10 @@
             </p>
             <img src="<%=t.pic%>" alt="team logo" class="responsive-img max200">
             <div>
-                <a href="/teams/<%=t.id%>" class="btn-small blue lighten-3">Details</a>
+               <p><a href="/teams/<%=t.id%>" class="btn-small blue lighten-3">Details</a></p>
             </div>
+            <a href="/teams/<%=t.id%>/win" class="btn-small green">+ Win</a>
+            <a href="/teams/<%=t.id%>/loss" class="btn-small red">+ loss</a>
         </div>
     <% }) %>
 </div>

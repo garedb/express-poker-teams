@@ -41,3 +41,7 @@ main {
 .max200 {
   max-height: 200px;
 }
+
+nav {
+  padding: 0px 10px;
+}
