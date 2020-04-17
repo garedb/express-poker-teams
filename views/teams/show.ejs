@@ -26,3 +26,9 @@
         </div>
     <% }) %>
 </div>
+
+<h2>Actions</h2>
+
+<form method="POST" action="/teams/<%=team.id%>?_method=DELETE">
+    <input type="submit" class="btn-small red" value="Delete Team">
+</form>

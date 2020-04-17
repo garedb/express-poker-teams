@@ -2,6 +2,7 @@
 let express = require('express')
 let layouts = require('express-ejs-layouts')
 let db = require('./models')
+let methodOverride = require('method-override')
 
 // Declare express app instance
 let app = express()
@@ -17,6 +18,9 @@ app.use(express.static('static'))
 
 // Use body parser to decode the POST variables
 app.use(express.urlencoded({ extended: false }))
+
+// Set up method-override to look for a query string attribute (_method)
+app.use(methodOverride('_method'))
 
 // Include all routes from routers/controllers
 app.use('/players', require('./controllers/players'))
